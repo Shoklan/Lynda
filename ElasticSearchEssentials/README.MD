@@ -93,7 +93,13 @@
 
 
 # Analyzing Your Data
-- 
+- **Aggregation** is done with the `aggs` keyword.
+- Sending `"size": 0` will prevent actual search results from being returned.
+- You can pass an **Aggregation Argument** using `"aggs"`.
+- *Aggregations* work inside of the context of a query.
+- **bool** means that multiple conditions can be matched.
+- **filter** allows you to limit what shows up in the results.
+- **global** tells Elastic Search to check all fields in the index.
 
 # Presenting Your Insights
 
