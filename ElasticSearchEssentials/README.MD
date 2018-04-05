@@ -77,10 +77,23 @@
 
 
 # Querying Data
-- 
+- To query all data in an indice, use `GET <indice>/<type>/_search`.
+- This is also called a **Match All** query.
+- You can use `match` inside a query json block to query Elastic Search for results.
+- You can also use `boost` to Prioritize values you're looking for in a search.
+- **Term Queries** cannot be used to refer to *text fields*.
+- You can use a **Terms Query** along with a list of values to search for more than one item.
+- You can use the **Range Keyword** to allow for keywords such as `gte` - *Greater Than Equal* - or `lte` - *Less Than Equal*.
+- The `_analyze` endpoint can be used to investigate our indices.
+- It will output what Elastic Search will do with test data submitted to it.
+- There are a few different built in tokenizers:
+  * *standard*: just breaks into tokens based on spaces and special characters get dropped.
+  * *uax_url_email*: detects email addresses and url formats in text.
+- Setting up your indexes with formatting ahead of time can do a lot of work for you.
 
 
 # Analyzing Your Data
+- 
 
 # Presenting Your Insights
 
