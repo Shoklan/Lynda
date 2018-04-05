@@ -35,6 +35,9 @@
 - **Shard**: a segment of the data.
 - **Replica**: a copy of the shard.
 - The default is to have 5 shards, and 1 replica.
+
+
+# Setup
 - The syntax for queries is `<REST VERB> <INDEX> <TYPE> <ID>`.
 - Example: `PUT sales order 123`
 - You can query information about the cluster using `GET _cat/` along with what you're looking at.
@@ -46,18 +49,36 @@
 - You can create data in an index using `PUT /<indice>/<type>/<id>`
 - You can also put information in using a JSON object.
 - You can delete an item using `DELETE <indice>`.
+
+
+# Loading Data
 - You don't want to push up data one by one.
 - You use the **Bulk API** instead.
 - This is at `/_bulk`.
 - Make sure that you're using the `curl --data-binary` flag.
+- There are 4 datatypes:
+  * Core
+    1. Text
+    2. Numeric
+    3. Boolean
+    4. Binary
+    5. Range.
+  * Complex
+    1. Array
+    2. object
+    3. Nested array of JSON objects.
+  * Geo
+    1. Point.
+    2. Shape.
+  * Specialized
+    1. IP Addresses.
+    2. Autocomplete Suggestions.
+    3. Tokens.
 
-
-
-# Setup
-
-# Loading Data
 
 # Querying Data
+- 
+
 
 # Analyzing Your Data
 
