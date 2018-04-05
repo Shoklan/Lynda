@@ -18,7 +18,10 @@
 - You use the **Bulk API** instead.
 - This is at `/_bulk`.
 - Make sure that you're using the `curl --data-binary` flag.
-- 
+- `curl -s -H "Content-Type: application/x-ndjson" -XPOST localhost:9200/_bulk --data-binary "@reqs"; echo`
+-
+
+
 
 #
 
