@@ -56,6 +56,7 @@
 - You use the **Bulk API** instead.
 - This is at `/_bulk`.
 - Make sure that you're using the `curl --data-binary` flag.
+- `curl -s -H "Content-Type: application/x-ndjson" -XPOST localhost:9200/_bulk --data-binary "@reqs"; echo`
 - There are 4 datatypes:
   * Core
     1. Text
@@ -100,8 +101,49 @@
 - **bool** means that multiple conditions can be matched.
 - **filter** allows you to limit what shows up in the results.
 - **global** tells Elastic Search to check all fields in the index.
+- To query for a percentile, you'd use:
+```
+"percentiles":{
+    "field": "<field_name>",
+    "percents": [
+      1,
+      5,
+      25,
+      50,
+      75,
+      95,
+      99
+    ]
+}
+```
+- The *percents* stand for the value at that percentile of your data.
+- The acronym **HDR** stands for **High Dynamic Range** historgram.
+- You append the option:
+```
+"hdr": {
+  "number_of_significant_value_digits": 3
+}
+```
+- You can check for where values compare to your data using **percentile_ranks**.
+- This is done using:
+```
+"percentile_ranks": {
+    "field": "balance",
+    "values": [
+      <n1>, <n2>, ...
+    ],
+    "hdr": {
+      "number_of_significant_value_digits": 3
+    }
+}
+```
+- You can also request a histgram using `"histogram"`.
+- You use the `"interval"` argument to control the bin size.
+
 
 # Presenting Your Insights
+
+
 
 # Research:
 
