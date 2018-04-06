@@ -44,11 +44,11 @@
 - You can then append it with:
   * `?v` is for formatting the return.
   * `nodes?v` to see node Information.
-  * `indices?v` to see any indices in the cluster.
-- You can create an indice using `PUT /<indice>`.
-- You can create data in an index using `PUT /<indice>/<type>/<id>`
+  * `indexes?v` to see any indexes in the cluster.
+- You can create an index using `PUT /<index>`.
+- You can create data in an index using `PUT /<index>/<type>/<id>`
 - You can also put information in using a JSON object.
-- You can delete an item using `DELETE <indice>`.
+- You can delete an item using `DELETE <index>`.
 
 
 # Loading Data
@@ -78,14 +78,14 @@
 
 
 # Querying Data
-- To query all data in an indice, use `GET <indice>/<type>/_search`.
+- To query all data in an index, use `GET <index>/<type>/_search`.
 - This is also called a **Match All** query.
 - You can use `match` inside a query json block to query Elastic Search for results.
 - You can also use `boost` to Prioritize values you're looking for in a search.
 - **Term Queries** cannot be used to refer to *text fields*.
 - You can use a **Terms Query** along with a list of values to search for more than one item.
 - You can use the **Range Keyword** to allow for keywords such as `gte` - *Greater Than Equal* - or `lte` - *Less Than Equal*.
-- The `_analyze` endpoint can be used to investigate our indices.
+- The `_analyze` endpoint can be used to investigate our indexes.
 - It will output what Elastic Search will do with test data submitted to it.
 - There are a few different built in tokenizers:
   * *standard*: just breaks into tokens based on spaces and special characters get dropped.
@@ -142,8 +142,8 @@
 
 
 # Presenting Your Insights
-
-
+- You can find index names in the **Management** tab.
+- Quite a bit of Visual Walk throughs.
 
 # Research:
 
