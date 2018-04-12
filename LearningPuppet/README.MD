@@ -23,9 +23,19 @@
 - A **Manifest** is a text file for holding Puppet code.
 - A **Profile** is a class that defines a specific set of configurations.
 - A **Role** is a clas that defines the business role of a node.
-
+- You download teh
 
 # Setting Up a Dev Environment
+- We'll be using virtualbox.
+- We'll also be using Open Source Puppet.
+- There are a whole bunch of extra features for the Enterprise version.
+- The **Vagrantfile** stores the configuration for our server.
+- To initialize it, you run `vagrant up`.
+- You can login using `vagrant ssh`.
+- You can install the **Puppet Master** using:
+  * `rpm -Uvh https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rmp` for Fedora/Red Hat.
+  * `dpkg -i https://apt.puppetlabs.com/puppet-release-xenial.deb` for fedora.
+-
 
 # First Steps With Puppet
 
